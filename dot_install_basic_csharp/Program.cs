@@ -26,6 +26,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 05 */
+            /*
             // よく使われる型
             string  str = "string"; // 文字列
             char    c   = 'c';      // 文字
@@ -39,7 +40,32 @@ namespace dot_install_basic_charp
             Console.WriteLine(x.GetType()); // -> System.String
             var y = 1;                      // 整数値を代入
             Console.WriteLine(y.GetType()); // -> System.Int32
-            
+            }/
+
+            /* lesson 06 */
+            var x = 10;
+            Console.WriteLine(x + 3);   // 加
+            Console.WriteLine(x - 3);   // 減
+            Console.WriteLine(x * 3);   // 積
+            Console.WriteLine(x / 3);   // 割
+            Console.WriteLine(x / 3.0);   // 割(浮動小数点数その1)
+            Console.WriteLine(x / (double)3);   // 割(浮動小数点数その2)
+            Console.WriteLine(x % 3);   // 余り
+
+            var y = 5;
+            y++;
+            Console.WriteLine(y);   // インクリメント
+            y = 5;
+            y--;
+            Console.WriteLine(y);   // デクリメント
+
+            var z = 10;
+            z += 5; // z = z + 5 と等価
+
+            var flag = true;
+            Console.WriteLine(flag);
+            Console.WriteLine(!flag); // 論理値の反転
+
 
 
         }
