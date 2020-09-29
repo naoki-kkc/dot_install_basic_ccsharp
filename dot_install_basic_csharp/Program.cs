@@ -174,6 +174,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 13 */
+            /*
             var scores = new[] {10, 20, 30 };
             for (int i = 0; i < scores.Length; i++)
             {
@@ -184,9 +185,27 @@ namespace dot_install_basic_charp
             {
                 Console.WriteLine(score);
             }
+            */
+
+            /* lesson 14 */
+            FuncLesson14_1();
+            Console.WriteLine(FuncLesson14_2());
+            Console.WriteLine(FuncLesson14_2_re());
 
 
 
         }
+
+        static void FuncLesson14_1()
+        {
+            Console.WriteLine("hello");
+        }
+
+        static string FuncLesson14_2()
+        {
+            return "hi";
+        }
+
+        static string FuncLesson14_2_re() => "hi!";
     }
 }
