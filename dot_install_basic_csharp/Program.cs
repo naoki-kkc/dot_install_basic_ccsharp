@@ -79,6 +79,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 08 */
+            /*
             var num = int.Parse(Console.ReadLine()); // 入力文字列を整数にパース(エラー処理は除いて簡素化)
             if (num > 80)
             {
@@ -93,6 +94,26 @@ namespace dot_install_basic_charp
             }
             Console.WriteLine("-------------------");
             Console.WriteLine((num > 80) ? "great" : "hoge");
+            */
+
+            /* lesson 09 */
+            var signal = Console.ReadLine();
+            switch (signal) {
+                case "red":
+                    Console.WriteLine("Stop");
+                    break;
+                case "green":
+                case "blue":
+                    // green または blueで実行
+                    Console.WriteLine("Go");
+                    break;
+                case "yellow":
+                    Console.WriteLine("Caution");
+                    break;
+                default:
+                    Console.WriteLine("wrong signal");
+                    break;
+            }
 
 
         }
