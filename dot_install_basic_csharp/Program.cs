@@ -97,6 +97,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 09 */
+            /*
             var signal = Console.ReadLine();
             switch (signal) {
                 case "red":
@@ -114,6 +115,23 @@ namespace dot_install_basic_charp
                     Console.WriteLine("wrong signal");
                     break;
             }
+            */
+
+            /* lesson 10 */
+            var i = 0;
+            while (i < 10)
+            {
+                Console.WriteLine(i);   // show 0 to 9
+                i++;
+            }
+
+            Console.WriteLine("---------------");
+            var j = 0;
+            do
+            {
+                Console.WriteLine(j);
+                j++;
+            } while (j < 10);
 
 
         }
