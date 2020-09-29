@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks.Sources;
 
 namespace dot_install_basic_charp
 {
@@ -69,12 +70,29 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 07 */
+            /*
             Console.WriteLine("hello " + "world");          // 文字列結合
             Console.WriteLine("hello " + "\n" + "world");   // 特殊文字
 
             // string.Formatを使用した代入
             Console.WriteLine(string.Format("{0} - {1}", "first", "secont"));
+            */
 
+            /* lesson 08 */
+            var num = int.Parse(Console.ReadLine()); // 入力文字列を整数にパース(エラー処理は除いて簡素化)
+            if (num > 80)
+            {
+                Console.WriteLine("Great");
+            }
+            else if (num > 60)
+            {
+                Console.WriteLine("Good");
+            }
+            else {
+                Console.WriteLine("so so");
+            }
+            Console.WriteLine("-------------------");
+            Console.WriteLine((num > 80) ? "great" : "hoge");
 
 
         }
