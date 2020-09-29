@@ -155,6 +155,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 12 */
+            /*
             int[] scores = new int[3];
             scores[0] = 10;
             scores[1] = 20;
@@ -170,6 +171,19 @@ namespace dot_install_basic_charp
             Console.WriteLine("diff score3 [0] = " + (scores[0] == scores3[0]));
             Console.WriteLine("diff score3 [1] = " + (scores[1] == scores3[1]));
             Console.WriteLine("diff score3 [2] = " + (scores[2] == scores3[2]));
+            */
+
+            /* lesson 13 */
+            var scores = new[] {10, 20, 30 };
+            for (int i = 0; i < scores.Length; i++)
+            {
+                Console.WriteLine(scores[i]);
+            }
+
+            foreach (var score in scores)
+            {
+                Console.WriteLine(score);
+            }
 
 
 
