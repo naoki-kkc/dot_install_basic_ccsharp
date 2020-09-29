@@ -43,6 +43,7 @@ namespace dot_install_basic_charp
             }/
 
             /* lesson 06 */
+            /*
             var x = 10;
             Console.WriteLine(x + 3);   // 加
             Console.WriteLine(x - 3);   // 減
@@ -65,6 +66,14 @@ namespace dot_install_basic_charp
             var flag = true;
             Console.WriteLine(flag);
             Console.WriteLine(!flag); // 論理値の反転
+            */
+
+            /* lesson 07 */
+            Console.WriteLine("hello " + "world");          // 文字列結合
+            Console.WriteLine("hello " + "\n" + "world");   // 特殊文字
+
+            // string.Formatを使用した代入
+            Console.WriteLine(string.Format("{0} - {1}", "first", "secont"));
 
 
 
