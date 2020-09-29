@@ -195,9 +195,18 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 15 */
+            /*
             FuncLesson15_1("Mike");
             FuncLesson15_2("George", 20);           // 引数の通りに渡す
             FuncLesson15_2(age: 20, name: "Steve"); // 引数を変数名付きで渡す
+            */
+
+            /* lesson 16 */
+            // 変数(フィールド)とメソッドを持ったクラス
+            Lesson16User user = new Lesson16User();
+            user.SayHi();       // => hi hoge
+            user.name = "fuga";
+            user.SayHi();       // => hi fuga
 
         }
 
@@ -215,6 +224,7 @@ namespace dot_install_basic_charp
         static string FuncLesson14_2_re() => "hi!";
         */
 
+        /*
         static void FuncLesson15_1(string name)
         {
             Console.WriteLine($"hi, {name}");
@@ -223,6 +233,16 @@ namespace dot_install_basic_charp
         static void FuncLesson15_2(string name, int age)
         {
             Console.WriteLine($"hello, {name}({age})");
+        }
+        */
+
+        class Lesson16User
+        {
+            public string name = "hoge";
+            public void SayHi() {
+                // Console.WriteLine($"hi {this.name}");
+                Console.WriteLine($"hi {name}");
+            }
         }
     }
 }
