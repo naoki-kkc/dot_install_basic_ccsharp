@@ -118,6 +118,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 10 */
+            /*
             var i = 0;
             while (i < 10)
             {
@@ -132,6 +133,24 @@ namespace dot_install_basic_charp
                 Console.WriteLine(j);
                 j++;
             } while (j < 10);
+            */
+
+            /* lesson 11 */
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 5)
+                {
+                    continue; // 5を出力しない
+                }
+
+                if (i == 8)
+                {
+                    break; // 8でループを抜ける
+                }
+
+                Console.WriteLine(i);
+
+            }
 
 
         }
