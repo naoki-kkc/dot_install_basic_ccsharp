@@ -202,11 +202,22 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 16 */
+            /*
             // 変数(フィールド)とメソッドを持ったクラス
             Lesson16User user = new Lesson16User();
             user.SayHi();       // => hi hoge
             user.name = "fuga";
             user.SayHi();       // => hi fuga
+            */
+
+            /* lesson 17 */
+            Lesson17User user = new Lesson17User();
+            user.SayHi();       // => hi foo
+            Lesson17User user2 = new Lesson17User("Tom");
+            user2.SayHi();      // => hi Tom
+
+
+
 
         }
 
@@ -236,6 +247,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         class Lesson16User
         {
             public string name = "hoge";
@@ -244,5 +256,29 @@ namespace dot_install_basic_charp
                 Console.WriteLine($"hi {name}");
             }
         }
+        */
+
+
+        class Lesson17User
+        {
+            public string name = "hoge";
+            /*
+            public Lesson17User()
+            {
+                this.name = "foo";
+            }
+            */
+            public Lesson17User() : this("foo") { } // 「this("foo")」で「Lesson17User("foo")」を呼び出したことになる
+            public Lesson17User(string name)        // コンストラクタのオーバーロード
+            {
+                this.name = name;
+            }
+            public void SayHi()
+            {
+                // Console.WriteLine($"hi {this.name}");
+                Console.WriteLine($"hi {name}");
+            }
+        }
+
     }
 }
