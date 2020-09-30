@@ -211,12 +211,17 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 17 */
+            /*
             Lesson17User user = new Lesson17User();
             user.SayHi();       // => hi foo
             Lesson17User user2 = new Lesson17User("Tom");
             user2.SayHi();      // => hi Tom
+            */
 
-
+            /* lesson 18 */
+            Lesson18UserChild userC = new Lesson18UserChild("Bob");
+            userC.SayHi();
+            userC.SayHello();
 
 
         }
@@ -258,16 +263,14 @@ namespace dot_install_basic_charp
         }
         */
 
-
+        /*
         class Lesson17User
         {
             public string name = "hoge";
-            /*
-            public Lesson17User()
-            {
-                this.name = "foo";
-            }
-            */
+            // public Lesson17User()
+            // {
+            //     this.name = "foo";
+            // }
             public Lesson17User() : this("foo") { } // 「this("foo")」で「Lesson17User("foo")」を呼び出したことになる
             public Lesson17User(string name)        // コンストラクタのオーバーロード
             {
@@ -279,6 +282,34 @@ namespace dot_install_basic_charp
                 Console.WriteLine($"hi {name}");
             }
         }
+        */
 
+        class Lesson18User
+        {
+            public string name = "hoge";
+            public Lesson18User() : this("foo") { } // 「this("foo")」で「Lesson17User("foo")」を呼び出したことになる
+            public Lesson18User(string name)        // コンストラクタのオーバーロード
+            {
+                this.name = name;
+            }
+            public virtual void SayHi()
+            {
+                // Console.WriteLine($"hi {this.name}");
+                Console.WriteLine($"hi {name}");
+            }
+        }
+
+        class Lesson18UserChild : Lesson18User
+        {
+            public Lesson18UserChild(string name) : base(name) { }
+            public void SayHello()
+            {
+                Console.WriteLine($"hello {name}");
+            }
+            public override void SayHi()
+            { // override
+                Console.WriteLine($"[admin] hi {name}");
+            }
+        }
     }
 }
