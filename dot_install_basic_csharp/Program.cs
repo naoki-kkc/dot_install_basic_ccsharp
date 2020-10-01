@@ -219,9 +219,21 @@ namespace dot_install_basic_charp
             */
 
             /* lesson 18 */
+            /*
             Lesson18UserChild userC = new Lesson18UserChild("Bob");
             userC.SayHi();
             userC.SayHello();
+            */
+
+            /* lesson19 */
+            Lesson19User user = new Lesson19User();
+            user.Showattrs();
+            Console.WriteLine(user.public_str);
+            // Console.WriteLine(user.protected_str); // 継承していないクラスからは見えないのでコンパイルエラー
+            // Console.WriteLine(user.private_str);   // privateなのでコンパイルエラー
+
+            Lesson19UserChild userc = new Lesson19UserChild();
+            userc.ShowattrsC();
 
 
         }
@@ -284,6 +296,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         class Lesson18User
         {
             public string name = "hoge";
@@ -309,6 +322,30 @@ namespace dot_install_basic_charp
             public override void SayHi()
             { // override
                 Console.WriteLine($"[admin] hi {name}");
+            }
+        }
+        */
+
+        class Lesson19User
+        {
+            public    string public_str     = "public";
+            protected string protected_str  = "protectred";
+            private   string private_str    = "private";
+            public void Showattrs()
+            {
+                Console.WriteLine("Lesson19User:" + public_str);
+                Console.WriteLine("Lesson19User:" + protected_str);
+                Console.WriteLine("Lesson19User:" + private_str);
+            }
+        }
+
+        class Lesson19UserChild: Lesson19User
+        {
+            public void ShowattrsC()
+            {
+                Console.WriteLine("Lesson19User:" + public_str);
+                Console.WriteLine("Lesson19User:" + protected_str);
+                // Console.WriteLine("Lesson19User:" + private_str); // privateは継承できないのでコンパイルエラー
             }
         }
     }
