@@ -226,6 +226,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson19 */
+            /*
             Lesson19User user = new Lesson19User();
             user.Showattrs();
             Console.WriteLine(user.public_str);
@@ -234,7 +235,14 @@ namespace dot_install_basic_charp
 
             Lesson19UserChild userc = new Lesson19UserChild();
             userc.ShowattrsC();
+            */
 
+            /* lesson20 */
+            Lesson20User user = new Lesson20User();
+            user.Name = "";
+            Console.WriteLine(user.Name);
+            user.Name = "fuga";
+            Console.WriteLine(user.Name);
 
         }
 
@@ -326,6 +334,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         class Lesson19User
         {
             public    string public_str     = "public";
@@ -348,5 +357,26 @@ namespace dot_install_basic_charp
                 // Console.WriteLine("Lesson19User:" + private_str); // privateは継承できないのでコンパイルエラー
             }
         }
+        */
+
+        class Lesson20User
+        {
+            private string name = "hoge";
+            
+            //プロパティ
+            public string Name
+            {
+                get { return this.name;  }
+                set {
+                    if (value != "")
+                    {
+                        this.name = value;
+                    }
+                }
+            }
+            //public string Name { get; set; } = "hoge"; // 短縮形
+        }
+
+
     }
 }
