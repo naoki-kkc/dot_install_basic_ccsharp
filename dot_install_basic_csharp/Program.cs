@@ -238,11 +238,26 @@ namespace dot_install_basic_charp
             */
 
             /* lesson20 */
+            /*
             Lesson20User user = new Lesson20User();
             user.Name = "";
             Console.WriteLine(user.Name);
             user.Name = "fuga";
             Console.WriteLine(user.Name);
+            */
+
+            /* lesson21 */
+            Lesson21Bean bean = new Lesson21Bean();
+            bean[0] = "hoge";
+            bean[1] = "fuga";
+            bean[2] = "foobar";
+            Console.WriteLine(bean[0]);
+            Console.WriteLine(bean[1]);
+            Console.WriteLine(bean[2]);
+
+            // 配列の長さが3なので、以下はエラーとなる
+            // bean[3] = "piyo";
+            // Console.WriteLine(bean[3]);
 
         }
 
@@ -359,6 +374,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         class Lesson20User
         {
             private string name = "hoge";
@@ -375,6 +391,17 @@ namespace dot_install_basic_charp
                 }
             }
             //public string Name { get; set; } = "hoge"; // 短縮形
+        }
+        */
+
+        class Lesson21Bean
+        {
+            private string[] members = new string[3];
+            public string this[int i]
+            {
+                get { return this.members[i]; }
+                set { this.members[i] = value; }
+            }
         }
 
 
