@@ -247,6 +247,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson21 */
+            /*
             Lesson21Bean bean = new Lesson21Bean();
             bean[0] = "hoge";
             bean[1] = "fuga";
@@ -258,7 +259,14 @@ namespace dot_install_basic_charp
             // 配列の長さが3なので、以下はエラーとなる
             // bean[3] = "piyo";
             // Console.WriteLine(bean[3]);
+            */
 
+            /* lesson22 */
+            Lesson22User.ShowCount();
+            Lesson22User user = new Lesson22User();
+            Lesson22User user2 = new Lesson22User();
+            Lesson22User user3 = new Lesson22User();
+            Lesson22User.ShowCount();
         }
 
         /*
@@ -394,6 +402,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         class Lesson21Bean
         {
             private string[] members = new string[3];
@@ -401,6 +410,19 @@ namespace dot_install_basic_charp
             {
                 get { return this.members[i]; }
                 set { this.members[i] = value; }
+            }
+        }
+        */
+
+        class Lesson22User
+        {
+            private static int count = 0;
+            public Lesson22User(){
+                Lesson22User.count++;
+            }
+            public static void ShowCount()
+            {
+                Console.WriteLine($"# of instances :{count}");
             }
         }
 
