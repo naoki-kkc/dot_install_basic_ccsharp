@@ -262,11 +262,21 @@ namespace dot_install_basic_charp
             */
 
             /* lesson22 */
+            /*
             Lesson22User.ShowCount();
             Lesson22User user = new Lesson22User();
             Lesson22User user2 = new Lesson22User();
             Lesson22User user3 = new Lesson22User();
             Lesson22User.ShowCount();
+            */
+
+            /* lesson23 */
+            Lesson23User taro = new Lesson23Japanese();
+            Lesson23User naomi = new Lesson23American();
+            taro.SayHi();
+            naomi.SayHi();
+
+
         }
 
         /*
@@ -414,6 +424,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         class Lesson22User
         {
             private static int count = 0;
@@ -425,7 +436,28 @@ namespace dot_install_basic_charp
                 Console.WriteLine($"# of instances :{count}");
             }
         }
+        */
 
+        abstract class Lesson23User
+        {
+            public abstract void SayHi();
+        }
+
+        class Lesson23Japanese : Lesson23User
+        {
+            public override void SayHi()
+            {
+                Console.WriteLine("こんにちは！こんにちは！");
+            }
+        }
+
+        class Lesson23American : Lesson23User
+        {
+            public override void SayHi()
+            {
+                Console.WriteLine("Hi！");
+            }
+        }
 
     }
 }
