@@ -271,11 +271,16 @@ namespace dot_install_basic_charp
             */
 
             /* lesson23 */
+            /*
             Lesson23User taro = new Lesson23Japanese();
             Lesson23User naomi = new Lesson23American();
             taro.SayHi();
             naomi.SayHi();
+            */
 
+            /* lesson24 */
+            Lesson24User user = new Lesson24User();
+            user.Share();
 
         }
 
@@ -438,6 +443,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         abstract class Lesson23User
         {
             public abstract void SayHi();
@@ -456,6 +462,21 @@ namespace dot_install_basic_charp
             public override void SayHi()
             {
                 Console.WriteLine("Hi！");
+            }
+        }
+        */
+
+        interface ILesson24Sharable
+        {
+            void Share();
+        }
+
+        class Lesson24User : ILesson24Sharable
+        {
+            // インターフェイスで定義されているので、Shareをコメントアウトするとエラーになる
+            public void Share()
+            {
+                Console.WriteLine("share by lesson24user");
             }
         }
 
