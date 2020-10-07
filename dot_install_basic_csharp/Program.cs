@@ -279,8 +279,21 @@ namespace dot_install_basic_charp
             */
 
             /* lesson24 */
+            /*
             Lesson24User user = new Lesson24User();
             user.Share();
+            */
+
+            /* lesson25 */
+            Lesson25MyInteger itgr = new Lesson25MyInteger();
+            itgr.ShowThreeTime(10);
+
+            Lesson25MyData<string> mystr = new Lesson25MyData<string>();
+            mystr.ShowThreeTime("hello");
+            Lesson25MyData<int> myint = new Lesson25MyData<int>();
+            myint.ShowThreeTime(10);
+            Lesson25MyData<double> mydouble = new Lesson25MyData<double>();
+            mydouble.ShowThreeTime(2.2);
 
         }
 
@@ -466,6 +479,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         interface ILesson24Sharable
         {
             void Share();
@@ -477,6 +491,28 @@ namespace dot_install_basic_charp
             public void Share()
             {
                 Console.WriteLine("share by lesson24user");
+            }
+        }
+        */
+
+        class Lesson25MyInteger
+        {
+            public void ShowThreeTime(int x)
+            {
+                Console.WriteLine(x);
+                Console.WriteLine(x);
+                Console.WriteLine(x);
+            }
+        }
+
+        class Lesson25MyData<T>
+        {
+            // 型を「T」にすることで汎化している
+            public void ShowThreeTime(T x)
+            {
+                Console.WriteLine(x);
+                Console.WriteLine(x);
+                Console.WriteLine(x);
             }
         }
 
