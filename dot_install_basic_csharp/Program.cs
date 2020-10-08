@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks.Sources;
+using Lesson26Namespace1;
 
 namespace dot_install_basic_charp
 {
@@ -285,6 +286,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson25 */
+            /*
             Lesson25MyInteger itgr = new Lesson25MyInteger();
             itgr.ShowThreeTime(10);
 
@@ -294,6 +296,14 @@ namespace dot_install_basic_charp
             myint.ShowThreeTime(10);
             Lesson25MyData<double> mydouble = new Lesson25MyData<double>();
             mydouble.ShowThreeTime(2.2);
+            */
+
+            /* lesson26 */
+            User user_ns1 = new User();
+            user_ns1.Say();
+
+            Lesson26Namespace2.User user_ns2 = new Lesson26Namespace2.User();
+            user_ns2.Say();
 
         }
 
@@ -323,198 +333,228 @@ namespace dot_install_basic_charp
         }
         */
 
-        /*
-        class Lesson16User
-        {
-            public string name = "hoge";
-            public void SayHi() {
-                // Console.WriteLine($"hi {this.name}");
-                Console.WriteLine($"hi {name}");
-            }
-        }
-        */
+        Lesson26Namespace1.User user = new Lesson26Namespace1.User();
 
-        /*
-        class Lesson17User
-        {
-            public string name = "hoge";
-            // public Lesson17User()
-            // {
-            //     this.name = "foo";
-            // }
-            public Lesson17User() : this("foo") { } // 「this("foo")」で「Lesson17User("foo")」を呼び出したことになる
-            public Lesson17User(string name)        // コンストラクタのオーバーロード
-            {
-                this.name = name;
-            }
-            public void SayHi()
-            {
-                // Console.WriteLine($"hi {this.name}");
-                Console.WriteLine($"hi {name}");
-            }
-        }
-        */
+    }
 
-        /*
-        class Lesson18User
-        {
-            public string name = "hoge";
-            public Lesson18User() : this("foo") { } // 「this("foo")」で「Lesson17User("foo")」を呼び出したことになる
-            public Lesson18User(string name)        // コンストラクタのオーバーロード
-            {
-                this.name = name;
-            }
-            public virtual void SayHi()
-            {
-                // Console.WriteLine($"hi {this.name}");
-                Console.WriteLine($"hi {name}");
-            }
-        }
 
-        class Lesson18UserChild : Lesson18User
-        {
-            public Lesson18UserChild(string name) : base(name) { }
-            public void SayHello()
-            {
-                Console.WriteLine($"hello {name}");
-            }
-            public override void SayHi()
-            { // override
-                Console.WriteLine($"[admin] hi {name}");
-            }
+    /*
+    class Lesson16User
+    {
+        public string name = "hoge";
+        public void SayHi() {
+            // Console.WriteLine($"hi {this.name}");
+            Console.WriteLine($"hi {name}");
         }
-        */
+    }
+    */
 
-        /*
-        class Lesson19User
+    /*
+    class Lesson17User
+    {
+        public string name = "hoge";
+        // public Lesson17User()
+        // {
+        //     this.name = "foo";
+        // }
+        public Lesson17User() : this("foo") { } // 「this("foo")」で「Lesson17User("foo")」を呼び出したことになる
+        public Lesson17User(string name)        // コンストラクタのオーバーロード
         {
-            public    string public_str     = "public";
-            protected string protected_str  = "protectred";
-            private   string private_str    = "private";
-            public void Showattrs()
-            {
-                Console.WriteLine("Lesson19User:" + public_str);
-                Console.WriteLine("Lesson19User:" + protected_str);
-                Console.WriteLine("Lesson19User:" + private_str);
-            }
+            this.name = name;
         }
-
-        class Lesson19UserChild: Lesson19User
+        public void SayHi()
         {
-            public void ShowattrsC()
-            {
-                Console.WriteLine("Lesson19User:" + public_str);
-                Console.WriteLine("Lesson19User:" + protected_str);
-                // Console.WriteLine("Lesson19User:" + private_str); // privateは継承できないのでコンパイルエラー
-            }
+            // Console.WriteLine($"hi {this.name}");
+            Console.WriteLine($"hi {name}");
         }
-        */
+    }
+    */
 
-        /*
-        class Lesson20User
+    /*
+    class Lesson18User
+    {
+        public string name = "hoge";
+        public Lesson18User() : this("foo") { } // 「this("foo")」で「Lesson17User("foo")」を呼び出したことになる
+        public Lesson18User(string name)        // コンストラクタのオーバーロード
         {
-            private string name = "hoge";
-            
-            //プロパティ
-            public string Name
-            {
-                get { return this.name;  }
-                set {
-                    if (value != "")
-                    {
-                        this.name = value;
-                    }
+            this.name = name;
+        }
+        public virtual void SayHi()
+        {
+            // Console.WriteLine($"hi {this.name}");
+            Console.WriteLine($"hi {name}");
+        }
+    }
+
+    class Lesson18UserChild : Lesson18User
+    {
+        public Lesson18UserChild(string name) : base(name) { }
+        public void SayHello()
+        {
+            Console.WriteLine($"hello {name}");
+        }
+        public override void SayHi()
+        { // override
+            Console.WriteLine($"[admin] hi {name}");
+        }
+    }
+    */
+
+    /*
+    class Lesson19User
+    {
+        public    string public_str     = "public";
+        protected string protected_str  = "protectred";
+        private   string private_str    = "private";
+        public void Showattrs()
+        {
+            Console.WriteLine("Lesson19User:" + public_str);
+            Console.WriteLine("Lesson19User:" + protected_str);
+            Console.WriteLine("Lesson19User:" + private_str);
+        }
+    }
+
+    class Lesson19UserChild: Lesson19User
+    {
+        public void ShowattrsC()
+        {
+            Console.WriteLine("Lesson19User:" + public_str);
+            Console.WriteLine("Lesson19User:" + protected_str);
+            // Console.WriteLine("Lesson19User:" + private_str); // privateは継承できないのでコンパイルエラー
+        }
+    }
+    */
+
+    /*
+    class Lesson20User
+    {
+        private string name = "hoge";
+
+        //プロパティ
+        public string Name
+        {
+            get { return this.name;  }
+            set {
+                if (value != "")
+                {
+                    this.name = value;
                 }
             }
-            //public string Name { get; set; } = "hoge"; // 短縮形
         }
-        */
+        //public string Name { get; set; } = "hoge"; // 短縮形
+    }
+    */
 
-        /*
-        class Lesson21Bean
+    /*
+    class Lesson21Bean
+    {
+        private string[] members = new string[3];
+        public string this[int i]
         {
-            private string[] members = new string[3];
-            public string this[int i]
-            {
-                get { return this.members[i]; }
-                set { this.members[i] = value; }
-            }
+            get { return this.members[i]; }
+            set { this.members[i] = value; }
         }
-        */
+    }
+    */
 
-        /*
-        class Lesson22User
+    /*
+    class Lesson22User
+    {
+        private static int count = 0;
+        public Lesson22User(){
+            Lesson22User.count++;
+        }
+        public static void ShowCount()
         {
-            private static int count = 0;
-            public Lesson22User(){
-                Lesson22User.count++;
-            }
-            public static void ShowCount()
-            {
-                Console.WriteLine($"# of instances :{count}");
-            }
+            Console.WriteLine($"# of instances :{count}");
         }
-        */
+    }
+    */
 
-        /*
-        abstract class Lesson23User
+    /*
+    abstract class Lesson23User
+    {
+        public abstract void SayHi();
+    }
+
+    class Lesson23Japanese : Lesson23User
+    {
+        public override void SayHi()
         {
-            public abstract void SayHi();
+            Console.WriteLine("こんにちは！こんにちは！");
         }
+    }
 
-        class Lesson23Japanese : Lesson23User
+    class Lesson23American : Lesson23User
+    {
+        public override void SayHi()
         {
-            public override void SayHi()
-            {
-                Console.WriteLine("こんにちは！こんにちは！");
-            }
+            Console.WriteLine("Hi！");
         }
+    }
+    */
 
-        class Lesson23American : Lesson23User
+    /*
+    interface ILesson24Sharable
+    {
+        void Share();
+    }
+
+    class Lesson24User : ILesson24Sharable
+    {
+        // インターフェイスで定義されているので、Shareをコメントアウトするとエラーになる
+        public void Share()
         {
-            public override void SayHi()
-            {
-                Console.WriteLine("Hi！");
-            }
+            Console.WriteLine("share by lesson24user");
         }
-        */
+    }
+    */
 
-        /*
-        interface ILesson24Sharable
+    /*
+    class Lesson25MyInteger
+    {
+        public void ShowThreeTime(int x)
         {
-            void Share();
+            Console.WriteLine(x);
+            Console.WriteLine(x);
+            Console.WriteLine(x);
         }
+    }
 
-        class Lesson24User : ILesson24Sharable
+    class Lesson25MyData<T>
+    {
+        // 型を「T」にすることで汎化している
+        public void ShowThreeTime(T x)
         {
-            // インターフェイスで定義されているので、Shareをコメントアウトするとエラーになる
-            public void Share()
-            {
-                Console.WriteLine("share by lesson24user");
-            }
+            Console.WriteLine(x);
+            Console.WriteLine(x);
+            Console.WriteLine(x);
         }
-        */
+    }
+    */
 
-        class Lesson25MyInteger
+
+}
+
+namespace Lesson26Namespace1
+{
+    class User
+    {
+        public void Say()
         {
-            public void ShowThreeTime(int x)
-            {
-                Console.WriteLine(x);
-                Console.WriteLine(x);
-                Console.WriteLine(x);
-            }
+            Console.WriteLine("hello!");
         }
+    }
+}
 
-        class Lesson25MyData<T>
+
+namespace Lesson26Namespace2
+{
+    class User
+    {
+        public void Say()
         {
-            // 型を「T」にすることで汎化している
-            public void ShowThreeTime(T x)
-            {
-                Console.WriteLine(x);
-                Console.WriteLine(x);
-                Console.WriteLine(x);
-            }
+            Console.WriteLine("hi!");
         }
-
     }
 }
