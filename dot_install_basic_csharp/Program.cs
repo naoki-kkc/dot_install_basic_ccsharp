@@ -308,11 +308,34 @@ namespace dot_install_basic_charp
             */
 
             /* lesson27 */
+            /*
             // 構造体 - クラスと似ているが継承ができない
             Point p1 = new Point(1, 2);
             p1.GetInfo();
             Point p2 = new Point(4, 8);
             p2.GetInfo();
+            */
+
+            /* lesson28 */
+            // 列挙型
+            Lesson28Direction direction = Lesson28Direction.Right;
+            Console.WriteLine(direction);
+
+            switch (direction)
+            {
+                case Lesson28Direction.Stay:
+                    Console.WriteLine("Stay selected");
+                    break;
+                case Lesson28Direction.Right:
+                    Console.WriteLine("Right selected");
+                    break;
+                case Lesson28Direction.Left:
+                    Console.WriteLine("Left selected");
+                    break;
+            }
+
+            Lesson28DirectionByNum directionBn = Lesson28DirectionByNum.Right;
+            Console.WriteLine((int)directionBn);
 
 
         }
@@ -569,6 +592,7 @@ namespace Lesson26Namespace2
 }
 */
 
+/*
 struct Point
 {
     public int X { get; }
@@ -582,4 +606,19 @@ struct Point
     {
         Console.WriteLine($"({X} : {Y})");
     }
+}
+*/
+
+enum Lesson28Direction
+{
+    Stay,
+    Right,
+    Left
+}
+
+enum Lesson28DirectionByNum
+{
+    Stay  = 1,
+    Right = 2,
+    Left  = 3
 }
