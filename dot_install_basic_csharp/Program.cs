@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks.Sources;
-using Lesson26Namespace1;
+// using Lesson26Namespace1;
 
 namespace dot_install_basic_charp
 {
@@ -299,11 +299,21 @@ namespace dot_install_basic_charp
             */
 
             /* lesson26 */
+            /*
             User user_ns1 = new User();
             user_ns1.Say();
 
             Lesson26Namespace2.User user_ns2 = new Lesson26Namespace2.User();
             user_ns2.Say();
+            */
+
+            /* lesson27 */
+            // 構造体 - クラスと似ているが継承ができない
+            Point p1 = new Point(1, 2);
+            p1.GetInfo();
+            Point p2 = new Point(4, 8);
+            p2.GetInfo();
+
 
         }
 
@@ -332,8 +342,6 @@ namespace dot_install_basic_charp
             Console.WriteLine($"hello, {name}({age})");
         }
         */
-
-        Lesson26Namespace1.User user = new Lesson26Namespace1.User();
 
     }
 
@@ -536,6 +544,7 @@ namespace dot_install_basic_charp
 
 }
 
+/*
 namespace Lesson26Namespace1
 {
     class User
@@ -556,5 +565,21 @@ namespace Lesson26Namespace2
         {
             Console.WriteLine("hi!");
         }
+    }
+}
+*/
+
+struct Point
+{
+    public int X { get; }
+    public int Y { get; }
+    public Point(int x, int y)
+    {
+        this.X = x;
+        this.Y = y;
+    }
+    public void GetInfo()
+    {
+        Console.WriteLine($"({X} : {Y})");
     }
 }
