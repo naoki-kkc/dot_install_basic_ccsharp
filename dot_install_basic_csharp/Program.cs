@@ -317,6 +317,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson28 */
+            /*
             // 列挙型
             Lesson28Direction direction = Lesson28Direction.Right;
             Console.WriteLine(direction);
@@ -336,6 +337,13 @@ namespace dot_install_basic_charp
 
             Lesson28DirectionByNum directionBn = Lesson28DirectionByNum.Right;
             Console.WriteLine((int)directionBn);
+            */
+
+            /* lesson29 */
+            Lesson29Div(1, 2);
+            Lesson29Div(1, -2);
+
+
 
 
         }
@@ -365,6 +373,22 @@ namespace dot_install_basic_charp
             Console.WriteLine($"hello, {name}({age})");
         }
         */
+        static void Lesson29Div(int a, int b)
+        {
+            try
+            {
+                if (b < 0)
+                {
+                    // 何らかの例外を発生させたい状況とする
+                    throw new Lesson29Exception("b : minus val is not support");
+                }
+                Console.WriteLine(a / b);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
 
     }
 
@@ -564,7 +588,10 @@ namespace dot_install_basic_charp
     }
     */
 
-
+    class Lesson29Exception : Exception
+    {
+        public Lesson29Exception(string msg) : base(msg) { }
+    }
 }
 
 /*
@@ -609,6 +636,7 @@ struct Point
 }
 */
 
+/*
 enum Lesson28Direction
 {
     Stay,
@@ -622,3 +650,4 @@ enum Lesson28DirectionByNum
     Right = 2,
     Left  = 3
 }
+*/
