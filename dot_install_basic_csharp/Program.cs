@@ -4,6 +4,10 @@ using System.Threading.Tasks.Sources;
 
 namespace dot_install_basic_charp
 {
+    // デリゲート：メソッドを割り当てることができる変数
+    delegate void MyDelegate();
+    delegate void MyDelegateMulti();
+
     class Program
     {
         static void Main(string[] args)
@@ -340,11 +344,23 @@ namespace dot_install_basic_charp
             */
 
             /* lesson29 */
+            /*
             Lesson29Div(1, 2);
             Lesson29Div(1, -2);
+            */
 
 
+            /* lesson30 */
+            // デリゲートがあることで戻り値の変数にメソッドを仕込むことができる
+            MyDelegate myDelegate = Lesson30SayHi;
+            myDelegate();
 
+            Console.WriteLine("---");
+
+            // マルチキャストデリゲート:一つのデリゲートに複数のメソッドを割り当てる
+            MyDelegateMulti myDelegateMulti = Lesson30SayHi;
+            myDelegateMulti += Lesson30SayGoodbye;
+            myDelegateMulti();
 
         }
 
@@ -373,6 +389,8 @@ namespace dot_install_basic_charp
             Console.WriteLine($"hello, {name}({age})");
         }
         */
+
+        /*
         static void Lesson29Div(int a, int b)
         {
             try
@@ -388,6 +406,17 @@ namespace dot_install_basic_charp
             {
                 Console.WriteLine(e.Message);
             }
+        }
+        */
+
+        static void Lesson30SayHi()
+        {
+            Console.WriteLine("hi!");
+        }
+
+        static void Lesson30SayGoodbye()
+        {
+            Console.WriteLine("goodbye...");
         }
 
     }
@@ -588,10 +617,12 @@ namespace dot_install_basic_charp
     }
     */
 
+    /*
     class Lesson29Exception : Exception
     {
         public Lesson29Exception(string msg) : base(msg) { }
     }
+    */
 }
 
 /*
