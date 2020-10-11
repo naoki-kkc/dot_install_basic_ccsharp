@@ -5,8 +5,11 @@ using System.Threading.Tasks.Sources;
 namespace dot_install_basic_charp
 {
     // デリゲート：メソッドを割り当てることができる変数
+    /*
     delegate void MyDelegate();
     delegate void MyDelegateMulti();
+    */
+    delegate void Lesson31Delegate();
 
     class Program
     {
@@ -351,6 +354,7 @@ namespace dot_install_basic_charp
 
 
             /* lesson30 */
+            /*
             // デリゲートがあることで戻り値の変数にメソッドを仕込むことができる
             MyDelegate myDelegate = Lesson30SayHi;
             myDelegate();
@@ -361,6 +365,27 @@ namespace dot_install_basic_charp
             MyDelegateMulti myDelegateMulti = Lesson30SayHi;
             myDelegateMulti += Lesson30SayGoodbye;
             myDelegateMulti();
+            */
+
+            /* lesson31 */
+            Lesson31Delegate lesson31delegate;
+
+            // 匿名メソッド
+            lesson31delegate = delegate
+            {
+                Console.WriteLine("匿名メソッド");
+            };
+
+            //ラムダ式
+            lesson31delegate += () =>
+            {
+                Console.WriteLine("ラムダ式");
+            };
+
+            // 1行ならば波括弧を省略することも可能
+            lesson31delegate += () => Console.WriteLine("ラムダ式(省略形)");
+
+            lesson31delegate();
 
         }
 
@@ -409,6 +434,7 @@ namespace dot_install_basic_charp
         }
         */
 
+        /*
         static void Lesson30SayHi()
         {
             Console.WriteLine("hi!");
@@ -418,6 +444,7 @@ namespace dot_install_basic_charp
         {
             Console.WriteLine("goodbye...");
         }
+        */
 
     }
 
