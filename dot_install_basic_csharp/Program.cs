@@ -9,7 +9,10 @@ namespace dot_install_basic_charp
     delegate void MyDelegate();
     delegate void MyDelegateMulti();
     */
+    /*
     delegate void Lesson31Delegate();
+    */
+    delegate void Lesson31EventHandler();
 
     class Program
     {
@@ -368,6 +371,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson31 */
+            /*
             Lesson31Delegate lesson31delegate;
 
             // 匿名メソッド
@@ -386,6 +390,13 @@ namespace dot_install_basic_charp
             lesson31delegate += () => Console.WriteLine("ラムダ式(省略形)");
 
             lesson31delegate();
+            */
+
+            /* lesson32 */
+            Lesson31Button btn = new Lesson31Button();
+            btn.Lesson31Event += () => Console.WriteLine("button clicked");
+            btn.OnClicked();
+
 
         }
 
@@ -650,6 +661,18 @@ namespace dot_install_basic_charp
         public Lesson29Exception(string msg) : base(msg) { }
     }
     */
+
+    class Lesson31Button
+    {
+        public event Lesson31EventHandler Lesson31Event;
+        public void OnClicked()
+        {
+            if (Lesson31Event != null)
+            {
+                Lesson31Event();
+            }
+        }
+    }
 }
 
 /*
