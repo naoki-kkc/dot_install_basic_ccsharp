@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks.Sources;
 // using Lesson26Namespace1;
+using System.Collections.Generic;
 
 namespace dot_install_basic_charp
 {
@@ -12,7 +14,9 @@ namespace dot_install_basic_charp
     /*
     delegate void Lesson31Delegate();
     */
+    /*
     delegate void Lesson31EventHandler();
+    */
 
     class Program
     {
@@ -393,10 +397,25 @@ namespace dot_install_basic_charp
             */
 
             /* lesson32 */
+            /*
             Lesson31Button btn = new Lesson31Button();
             btn.Lesson31Event += () => Console.WriteLine("button clicked");
             btn.OnClicked();
+            */
 
+            /* lesson33 */
+            List<int> list_init = new List<int>() { 10, 30, 40, 20};
+            Console.WriteLine(list_init.Count); // リストの個数を表示
+
+            List<int> list_add = new List<int>();
+            list_add.Add(10);
+            list_add.Add(30);
+            list_add.Add(40);
+            list_add.Add(20);
+            foreach(var element in list_add)
+            {
+                Console.WriteLine(element);
+            }
 
         }
 
@@ -662,6 +681,7 @@ namespace dot_install_basic_charp
     }
     */
 
+    /*
     class Lesson31Button
     {
         public event Lesson31EventHandler Lesson31Event;
@@ -673,6 +693,7 @@ namespace dot_install_basic_charp
             }
         }
     }
+    */
 }
 
 /*
