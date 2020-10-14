@@ -404,6 +404,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson33 */
+            /*
             List<int> list_init = new List<int>() { 10, 30, 40, 20};
             Console.WriteLine(list_init.Count); // リストの個数を表示
 
@@ -416,6 +417,23 @@ namespace dot_install_basic_charp
             {
                 Console.WriteLine(element);
             }
+            */
+
+            /* lesson34 */
+            HashSet<int> answers = new HashSet<int>() { 3, 5, 8, 5 };
+            answers.Add(10);
+            foreach (var answer in answers)
+            {
+                Console.WriteLine(answer);
+            }
+
+            answers.Remove(1);
+            foreach (var answer in answers)
+            {
+                Console.WriteLine(answer);
+            }
+
+            Console.WriteLine(answers.Contains(3));
 
         }
 
