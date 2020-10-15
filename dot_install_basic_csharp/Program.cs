@@ -420,6 +420,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson34 */
+            /*
             HashSet<int> answers = new HashSet<int>() { 3, 5, 8, 5 };
             answers.Add(10);
             foreach (var answer in answers)
@@ -434,6 +435,32 @@ namespace dot_install_basic_charp
             }
 
             Console.WriteLine(answers.Contains(3));
+            */
+
+            /* lesson35 */
+            Dictionary<string, int> dict = new Dictionary<string, int>()
+            {
+              {"hoge", 10},
+              {"fuga", 20},
+            };
+            Console.WriteLine(dict["fuga"]);
+
+            dict.Add("foo", 30);
+            Console.WriteLine(dict["foo"]);
+
+            foreach (KeyValuePair<string, int> user in dict)
+            {
+                Console.WriteLine($"{user.Key}: {user.Value}");
+            }
+
+            dict["hoge"] = 40;
+            Console.WriteLine("hoge to 40");
+
+            foreach (KeyValuePair<string, int> user in dict)
+            {
+                Console.WriteLine($"{user.Key}: {user.Value}");
+            }
+
 
         }
 
