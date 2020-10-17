@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks.Sources;
 // using Lesson26Namespace1;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace dot_install_basic_charp
 {
@@ -438,6 +439,7 @@ namespace dot_install_basic_charp
             */
 
             /* lesson35 */
+            /*
             Dictionary<string, int> dict = new Dictionary<string, int>()
             {
               {"hoge", 10},
@@ -460,7 +462,31 @@ namespace dot_install_basic_charp
             {
                 Console.WriteLine($"{user.Key}: {user.Value}");
             }
+            */
 
+            /* lesson36 */
+            //LINQ
+            List<double> list = new List<double>() { 33.3, 49.5, 55.5};
+
+            // SQL
+            var results_s = from element in list
+                          where element * 1.10 > 50.0
+                          select element * 1.10;
+
+            foreach (var result in results_s)
+            {
+                Console.WriteLine(result);
+            }
+
+            //Method
+            var results_m = list
+                .Select(n => n * 1.10)
+                .Where(n => n > 50.0);
+
+            foreach (var result in results_m)
+            {
+                Console.WriteLine(result);
+            }
 
         }
 
